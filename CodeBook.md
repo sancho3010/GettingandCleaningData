@@ -49,12 +49,12 @@ The set of variables that were estimated from these signals are:
 
 - **response**: six quotidian activities:
 
-  1. WALKING
-  2. WALKING_UPSTAIRS
-  3. WALKING_DOWNSTAIRS
-  4. SITTING
-  5. STANDING
-  6. LAYING
+ 1. WALKING
+ 2. WALKING_UPSTAIRS
+ 3. WALKING_DOWNSTAIRS
+ 4. SITTING
+ 5. STANDING
+ 6. LAYING
 
 ## R Script: run_analysis.R
 
