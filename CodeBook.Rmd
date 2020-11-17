@@ -19,12 +19,11 @@ Human Activity Recognition database was built from a group of 30 volunteers with
 ## Description of the features (predictors)
 
 <div class=text-justify>
-"The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag)." () 
 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
-</div>
 
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
@@ -80,19 +79,19 @@ On the other hand, the predictors's names and the levels of the response variabl
  
 In general, the tasks performed were the next:
 
- 1. Checks if exist a folder called data in the directory. If it does not exist, a new folder will be     created in the actual directory with that name: `data`
+ 1. Checks if exist a folder called data in the directory. If it does not exist, a new folder will be created in the actual directory with that name: `data`
  
  2. Downloads and decompress the file with `download.file` and `unzip` functions.
  
- 3. Merges the training and the test sets to create one data set with the `dplyr` package. After          reading the data and merging them, their variables were renamed with the help of the `names`          function. 
+ 3. Merges the training and the test sets to create one data set with the `dplyr` package. After reading the data and merging them, their variables were renamed with the help of     the `names` function. 
  
- 4. Extracts only the measurements on the mean and standard deviation for each measurement. This was      done with the `gsub` function. Subsequently, the output of this function was passed through the       data set `predictors_complete` in order to extract only the variables that contain the measures       solicited. Finally, the resulting data sets were joined with `cbind` function and called:             `dataset_complete`.
+ 4. Extracts only the measurements on the mean and standard deviation for each measurement. This was done with the `gsub` function. Subsequently, the output of this function was     passed through the data set `predictors_complete` in order to extract only the variables that contain the measures solicited. Finally, the resulting data sets were joined       with `cbind` function and called:`dataset_complete`.
  
- 5. Uses descriptive activity (response) names to name the activities in the data set. This was done      with the `factor` function, where the labels' argument was filled out from `labels_response` data     set.
+ 5. Uses descriptive activity (response) names to name the activities in the data set. This was done with the `factor` function, where the labels' argument was filled out from       `labels_response` data set.
  
- 6. Appropriately labels the data set with descriptive variable names. This was done with the `gsub`      function, literals and metacharacters.
+ 6. Appropriately labels the data set with descriptive variable names. This was done with the `gsub` function, literals and metacharacters.
  
- 7. From the `dataset_complete` data set, creates a second, independent tidy data set with the average     of each variable for each activity and each subject. Here, we used the                                [dplyr](https://dplyr.tidyverse.org/) package, specifically the functions group_by, summarise,        across and everything.
+ 7. From the `dataset_complete` data set, creates a second, independent tidy data set with the average     of each variable for each activity and each subject. Here, we used the     [dplyr](https://dplyr.tidyverse.org/) package, specifically the functions group_by, summarise, across and everything.
  
  8. Finally, we export the ordered data to the actual directory in a text file.
 </div> 
