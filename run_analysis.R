@@ -93,8 +93,4 @@ str(tidy_dataset)
 
 #Export file in .txt
 getwd()
-write.table(tidy_dataset, file = paste0(getwd(), "./data/tidy_dataset.txt"))
-
-
-
-
+write.table(tidy_dataset, file = paste0(getwd(), "./data/tidy_dataset.txt"), row.names = FALSE)
