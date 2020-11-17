@@ -1,12 +1,4 @@
----
-title: "Human Activity Recognition Using Smartphones Dataset"
-output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
+# Human Activity Recognition Using Smartphones Dataset
 
 Human Activity Recognition database was built from a group of 30 volunteers within an age bracket of 19-48 years while performing six quotidian activities, the which were monitored with one smartphone with embedded inertial sensors on your waist.
 
