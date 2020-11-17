@@ -16,8 +16,8 @@ if(!file.exists("./data")){
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 name <- "projectdata"
 
-#download and descomprime file
-download.file(fileUrl, 
+#download and decompress file
+download.file(fileUrl,
               destfile = paste0("./data/", name, ".zip"))
 unzip(zipfile = paste0("./data/", name, ".zip"), exdir = paste0(getwd(), "./data"))
 
