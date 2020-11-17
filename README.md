@@ -9,7 +9,6 @@ This is a new repository shows the getting, manipulation, cleaning and ordering 
 
 ## R Script: Analysis
 
-<div class=text-justify>
 This file contains the getting, manipulation, cleaning and ordering of three principal datasets: `response_complete`, `subject_complete` and `predictors_complete`. These principal datasets were formed as from six datasets initial:
 
  - Values of the response (activities): `Y_train.txt` and `Y_test.txt`
@@ -29,7 +28,7 @@ In general, the tasks performed were the next:
  
  3. Merges the training and the test sets to create one data set with the `dplyr` package. After reading the data and merging them, their variables were renamed with the help of     the `names` function. 
  
- 4. Extracts only the measurements on the mean and standard deviation for each measurement. This was      done with the `gsub` function. Subsequently, the output of this             function was passed through the data set `predictors_complete` in order to extract only the variables that contain the measures solicited. Finally, the resulting data           sets were joined with `cbind` function and called: `dataset_complete`.
+ 4. Extracts only the measurements on the mean and standard deviation for each measurement. This was done with the `gsub` function. Subsequently, the output of this                 function was passed through the data set `predictors_complete` in order to extract only the variables that contain the measures solicited. Finally, the resulting data           sets were joined with `cbind` function and called: `dataset_complete`.
  
  5. Uses descriptive activity (response) names to name the activities in the data set. This was done with the `factor` function, where the labels' argument was filled out from       `labels_response` data set.
  
@@ -38,5 +37,3 @@ In general, the tasks performed were the next:
  7. From the `dataset_complete` data set, creates a second, independent tidy data set with the average     of each variable for each activity and each subject. Here, we used the     [dplyr](https://dplyr.tidyverse.org/) package, specifically the functions group_by, summarise, across and everything.
  
  8. Finally, we export the ordered data to the actual directory in a text file.
- 
- </div>
